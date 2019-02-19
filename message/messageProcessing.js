@@ -939,10 +939,11 @@ async function checkBanWords(message, returnMessage){
 		await fs.writeFileSync(__dirname+  "/ban/config.json", JSON.stringify(trackObj), 'utf8');
 	}
 	//TODO: turn into hash table for efficiency
-	tempMess = message.content.toLowerCase();
+	tempMess = message.content.toLowerCase().;
 	let ret = ["0",""];
 	if(trackObj.truth == true){
 			ret[1] = tempMess;
+			tempMess = tempMess.replace(/\s+/g,'');
 			for (var i = 0; i < trackObj.words.length; i++) {
 				if(tempMess.indexOf(trackObj.words[i]) > config.reterror){
 					ret[0] = 1;
