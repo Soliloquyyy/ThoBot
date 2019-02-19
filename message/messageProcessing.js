@@ -943,7 +943,7 @@ async function checkBanWords(message, returnMessage){
 	let ret = ["0",""];
 	if(trackObj.truth == true){
 			ret[1] = tempMess;
-			tempMess = tempMess.replace(/ /g,'');
+			//tempMess = tempMess.replace(/ /g,'');
 			for (var i = 0; i < trackObj.words.length; i++) {
 				if(tempMess.indexOf(trackObj.words[i]) > config.reterror){
 					ret[0] = 1;
