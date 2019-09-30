@@ -166,7 +166,7 @@ module.exports.process = async function(message){
 	if(message.author.id == "473650641844043806") return config.reterror;
 
 	//handling roles on private server remove if need
-	if(message.channel.id == privateConst.testChannel){
+	if(message.channel.id == privateConst.osuucsdChannel){
 		roleHandler.roleHandler(message);
 		return;
 	}
