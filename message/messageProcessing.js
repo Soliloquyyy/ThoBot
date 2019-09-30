@@ -166,7 +166,7 @@ module.exports.process = async function(message){
 	if(message.author.id == "473650641844043806") return config.reterror;
 
 	//checks if message has jarek name (inside joke)
-	//
+	/*
 	if(message.guild.id == privateConst.osuucsdid){
 		var returnMessage = "";
 		let ret = [];
@@ -175,7 +175,7 @@ module.exports.process = async function(message){
 		if(ret[0] != "0"){
 			await deleteBanMessage(message, ret);
 		}
-	}
+	}*/
 
 	//check if message contains the prefix of bot to answer
     if (message.content.toLowerCase().indexOf(config.pref) <= config.reterror
