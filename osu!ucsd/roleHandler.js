@@ -15,7 +15,8 @@ module.exports.roleHandler = async function(message){
 		if(msgStr.indexOf(parseArr[i]) > -1){
 			const roleid = roleids[i];
 			message.member.addRole(roleid).then(console.log(roleid)).catch(console.error);
-			message.channel.send(message.author + privateConst.beenRoled);
+			//message.channel.send(message.author + privateConst.beenRoled);
+			message.guild.channels.get(privateConst.osuucsdGeneral).send(message.author + privateConst.beenRoled);
 		}
 	}
 
