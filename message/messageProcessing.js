@@ -12,6 +12,7 @@ const copypasta = require("../config/copypasta.json");
 const privateConst = require("../private/privateConst.json");
 const youtubeSearch = require("../youtubeapi/youtubeSearch.js");
 const poweroftwoBoard = require("../2048Game/Board.js");
+const roleHandler = require('../osu!ucsd/roleHandler.js');
 const osuApi = require("../osuApi/osuApi.js");
 var bmresp = [];
 var osuJsonCount = -1;
@@ -161,9 +162,17 @@ module.exports.prompt = async function(message,client){
 module.exports.process = async function(message){
 	//checks if belong to a channel
 	if(!message.guild) return config.reterror;
-
 	//checks if bot
 	if(message.author.id == "473650641844043806") return config.reterror;
+
+	//handling roles on private server remove if need
+	if(message.channel.id == privateConst.osuucsdChannel){
+		roleHandler.roleHandler(message);
+		return;
+	}
+
+
+
 
 	//checks if message has jarek name (inside joke)
 	/*

@@ -23,6 +23,7 @@ client.on("ready", () => {
 
 //event for someone joining osu! ucsd server
 //remove this block or else it won't run
+
 client.on("guildMemberAdd", member => {
 	welcomeHandler.welcomeHandler(member);
 	return;

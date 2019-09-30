@@ -28,6 +28,7 @@ module.exports.welcomeHandler = async function(member){
 		try{
 			//welcome new user
 			member.guild.channels.get(privateConst.osuucsdChannel).send("<@"+member.id+"> " + privateConst.welcomeRole);
+			/*
 			//create message collector for their reply
 			const collector = new Discord.MessageCollector(member.guild.channels.get(privateConst.osuucsdChannel), m => m.author.id === member.id, { time: 3000000 });
 			//console.log(collector);
@@ -45,7 +46,7 @@ module.exports.welcomeHandler = async function(member){
 					}
 				}
 				
-			});
+			});*/
 		} catch(err){
 			console.log(err);
 			return;
