@@ -8,6 +8,7 @@ connectFourGame/games/*
 node_modules/
 redditTracker/tracking/*
 redditTracker/subreddits.json
+tracking/*
 message/ban/*
 
 #exception
