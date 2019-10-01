@@ -8,6 +8,7 @@ connectFourGame/games/*
 node_modules/
 redditTracker/tracking/*
 redditTracker/subreddits.json
+redditTracker/threshold.json
 tracking/*
 message/ban/*
 
