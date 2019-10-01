@@ -110,6 +110,7 @@ async function getSub(name, channelID, index){
 	result = JSON.parse(result);
 	for (var i = 0; i < result.data.children.length; ++i) {
 		let temp = result.data.children[i].data;
+		console.log(temp);
 		if(temp.ups > threshold[channelID][index]){
 			//if already has
 			if(trackObj.indexOf(temp.url) <= -1){
